@@ -1,0 +1,24 @@
+
+<table class="table cardtable">
+    <tr>
+        <td><h3>All Cards</h3></td>
+    </tr>
+    <tr id="categories">
+        <td>Category</td>
+        <td>Question</td>
+        <td>Answer</td>
+        <td>Difficulty</td>
+        <td>Link to more</td>
+    </tr>
+    <tr ng-repeat="card in vm.cards">
+        <td><a ui-sref="viewCard({id:card.id})">{{card.category}}</a></td>
+        <td>{{card.question}}</td>
+        <td>{{card.answer}}</td>
+        <td>{{card.difficulty}}</td>
+        <td><a href="{{card.url}}">Link</a></td>
+        <td style="text-align: right;" class="col-md-2">
+            <a class="btn btn-primary" ui-sref="editCard({id:card.id})"><i class="fa fa-pencil-square-o"></i></a>
+            <a class="btn btn-danger"  ng-click="vm.deleteCard(card)"><i class="fa fa-remove"></i></a>
+        </td>
+    </tr>
+</table>

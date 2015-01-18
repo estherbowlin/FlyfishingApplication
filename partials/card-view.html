@@ -1,0 +1,26 @@
+
+<table class="table cardtable">
+    <tr>
+        <td class="col-md-1">Category</td>
+        <td>{{vm.card.category}}</td>
+    </tr>
+    <tr>
+        <td>Question</td>
+        <td>{{vm.card.question}}</td>
+    </tr>
+    <tr>
+        <td>Answer</td>
+        <td>{{vm.card.releaseYear}}</td>
+    </tr>
+    <tr>
+        <td>Difficulty</td>
+        <td>{{vm.card.difficulty}}</td>
+    </tr>
+    <tr>
+        <td>Link to more</td>
+        <td><a href="{{vm.card.url}}">Link</a></td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="editCard({id:vm.card.id})">Edit</a>
+</div>
